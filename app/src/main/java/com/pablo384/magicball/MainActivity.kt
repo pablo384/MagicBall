@@ -33,9 +33,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        phraseTextView.text=savedInstanceState.getString(TEXTO)
-        phraseTextView.setTextColor(savedInstanceState.getInt(COLOR))
-        pressMeButton.setBackgroundColor(savedInstanceState.getInt(COLOR))
+        with(savedInstanceState){
+            phraseTextView.text=getString(TEXTO)
+            phraseTextView.setTextColor(getInt(COLOR))
+            pressMeButton.setBackgroundColor(getInt(COLOR))
+        }
     }
 }
 fun IntArray.getRandomElement()=this[(Math.random()*this.size).toInt()]
