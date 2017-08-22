@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Magic Ball</string>
+    <string name="phrase_text">Haz una pregunta y presiona el boton</string>
+    <string name="button_Text">Presioname</string>
 </resources>
