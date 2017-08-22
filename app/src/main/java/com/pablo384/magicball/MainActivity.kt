@@ -15,13 +15,15 @@ class MainActivity : AppCompatActivity() {
         //3- generar una frase aleatoria
 
         pressMeButton.setOnClickListener {
-            val randomColor= getRandomColor()
+            val colors = intArrayOf(Color.CYAN, Color.RED, Color.MAGENTA, Color.GREEN, Color.BLACK)
+            val phrases = resources.getStringArray(R.array.phrases)
+            val randomColor= colors[getRansumNum(colors.size)]
+
+            pressMeButton.setBackgroundColor(randomColor)
+            phraseTextView.text= phrases[getRansumNum(phrases.size)].toString()
+            phraseTextView.setTextColor(randomColor)
         }
     }
 
-    private fun getRandomColor(): Int {
-        val colors = intArrayOf(Color.CYAN, Color.RED, Color.MAGENTA, Color.GREEN, Color.BLACK)
-        val random = (Math.random()*colors.size).toInt()
-        return colors[random]
-    }
+    private fun getRansumNum(max:Int)=(Math.random()*max).toInt()
 }

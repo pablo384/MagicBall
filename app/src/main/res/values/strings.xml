@@ -2,4 +2,13 @@
     <string name="app_name">Magic Ball</string>
     <string name="phrase_text">Haz una pregunta y presiona el boton</string>
     <string name="button_Text">Presioname</string>
+
+    <string-array name="phrases">
+        <item>puta wea</item>
+        <item>Hola como estas</item>
+        <item>NOse que hago aqui</item>
+        <item>Probando Kotlin</item>
+        <item>Esto es una nueva vaina</item>
+        <item>EL mundo esta LOCO</item>
+    </string-array>
 </resources>
